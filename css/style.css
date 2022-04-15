@@ -1,0 +1,464 @@
+
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+-----------------*/
+body{
+	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+	font-size: 16px;
+}
+
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*ーーーーーーーーーーー*/
+.body{
+	width: 960px;
+}
+
+html,body{
+	height: 10%;
+}
+
+#particles-js{
+	position: fixed;/* 描画固定 */
+	z-index: -1;/* 描画を一番下に */
+	width: 100%;
+	height: 100%;
+	background-color: #DDA0DD; /* 背景の色 */
+}
+
+#wrapper{
+	position: relative;/* 描画を#particles-jsよりも上にする */
+	z-index: 1; /* z-indexの数字を大きくすることで描画をparticles-jsより上に */
+	width: 100%;
+	height: 100%;
+}
+
+.title{
+	background: url(../img/mainbg.png);
+	background-size: cover;
+	background-position: center;
+	height: 400px;
+	color: aliceblue;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+h1{
+	font-size: 48px;
+}
+.title p{
+	font-size: 36px;
+}
+
+.selection{
+	font-size: 21px;
+	display: flex;
+	justify-content: space-evenly;
+	border: 1px solid #efefef;
+}
+.selection_image {
+	width: 20%;
+	align-content: left;
+}
+
+.selection_text{
+	display: flex;
+	justify-content: flex-end;
+}
+.selection_text p{
+	margin: 0 20px;
+}
+
+.heading h2{
+	font-size: 24px;
+	color: #ffd61a;
+  margin-top: 120px;
+	margin-bottom: 24px;
+}
+.heading{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ width: 80%;
+ margin: 10%;
+}
+p1{
+	margin-bottom: 24px;
+}
+p2{
+	margin-bottom: 40px;
+}
+p3{
+	margin-bottom: 80px;
+}
+
+/* ああああ */
+/* .about_image{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+} */
+
+.selection_course{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-bottom: 64px;
+}
+h3{
+	font-size: 24px;
+	color: #222222;
+	margin-top: 80px;
+}
+
+h4{
+	margin-bottom: 40px;
+	color: #222222;
+	font-size: 24px;
+}
+/* スライダーのためのcss */
+.slider img{
+	width: 100%;
+	height: 500px;
+}
+
+
+
+/* slickのjsで書かれるタグ内、スライド左右の余白調整 */
+.slider.slick-slide{
+	margin:0 10px;/* スライド左右の余白調整 */
+}
+
+.img_section{
+	display: flex;
+	background-color: #EAD9FF;
+}
+
+.img_section_img{
+	width: 50%;
+}
+
+.img_section_text{
+	width: 50%;
+	display: flex;
+	align-items: center;
+	padding-left: 40px;
+ } 
+
+.img_section_text div{
+	 display: flex;
+	 flex-direction: column;
+	 justify-items: center;
+	 padding-right: 20%;
+}
+
+
+.img_section_img img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.img_hoge{
+	display: flex;
+	background-color: #FFD5EC;
+}
+
+.img_hoge_text{
+	display: flex;
+	width: 50%;	
+	align-items: center;
+}
+
+.img_hoge_text div{
+	padding-left: 20%;
+	padding-right: 5%;
+}
+
+.img_hoge_img{
+	width: 50%;
+}
+.img_hoge_img img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.course_03_text_h{
+	font-size: 24px;
+	color: #222222;
+	padding-bottom: 40px;
+}
+
+.selection_course_03{
+	display: flex;
+	background-color: #D7EEFF;
+}
+
+.selection_course_03_img{
+	width: 50%;
+}
+
+.selection_course_03_text{
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.selection_course_03_text div{
+	padding-left: 40px;
+	align-items: center;
+	padding-right: 20%;
+}
+
+.selection_course_03_img img{
+	width: 100%;
+	height: 100%;
+}
+
+h6{
+	font-size: 24px;
+	color: #222222;
+	margin-top: 64px;
+}
+
+.section_news{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin-top: 64px;
+	margin-bottom: 64px;
+	justify-items: center;
+	width: 100%;
+}
+
+.section_news_hoge{
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	align-items: center;
+}
+
+.section_news_items{
+	display: flex;
+	width: 80%;
+}
+
+
+.news_item{
+	width: 100%;
+	padding-left: 32px;
+}
+
+.section_p{
+	padding-top: 32px;
+	padding-bottom: 24px;
+}
+
+.selection_text_p{
+	width: 90%;
+}
+
+.section_btn{
+	padding-top: 56px;
+	padding-bottom: 48px;
+	
+  display: flex;
+  justify-content: center;
+}
+
+
+.btn{
+	text-align: center;
+	font-size: 21px;
+	padding: 30px 65px;
+	background-color: #ffd61a;
+	background-size: 30px;
+}
+
+.access_section{
+	background-color: #fafafa;
+}
+
+.access_text{
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	align-content: center;
+	text-align: center;
+	padding-bottom: 64px;
+}
+
+.access_text h6{
+ padding-top: 64px;
+}
+
+.access_text p{
+	padding-top: 24px;
+}
+
+.iframe{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+td{
+	padding: 20px 40px;
+}
+
+.section_table_hoge{
+	margin-top: 64px;
+	margin-bottom: 80px;
+}
+
+.section_table{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.section_contact{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.contact_p{
+	padding-top: 25px;
+}
+
+.section_contact_p{
+	padding-top: 45px;
+}
+
+.contact_p2{
+	padding-top: 32px;
+	padding-bottom: 80px;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.contact_p2 p{
+	width: 50%;
+}
+
+.section_form{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.motivation_checkbox{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-position: center;
+}
+textarea{
+	border: #bfbfbf;
+	width: 328px;
+	height: 108px;
+}
+
+.section_contact_btn{
+	display: flex;
+	justify-content: center;
+	padding-top: 56px;
+  padding-bottom: 48px;
+}
+
+footer{
+	font-size: 18px;
+	color: #bfbfbf;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	background-color: #707070;
+	display: flex;
+	justify-content: center;
+}
+
+/* トップへ戻るボタン */
+#page-top{
+	position: fixed;
+	right: 10px;
+	bottom: 150px;
+	height: 50px;
+	text-decoration: none;
+	font-weight:  bold;
+	transform: rotate(90deg);
+	font-size: 100%;
+	line-height: 1.5rem;
+	color: #FFC0CB;
+	padding: 0 0 0 35px;
+	border-top: solid 1px;
+}
+
+#page-top::before{
+	content: "";
+	display: block;
+	position: absolute;
+	top: -1px;
+	left: 0px;
+	width: 15px;
+	border-top: solid 1px;
+	transform: rotate(35deg);
+	transform-origin: left top;
+}
+/* トップへ戻るボタンここまで */
+
+
+
+/* .form_motivatiion_section{
+	display: flex; */
+	/* flex-direction: column; */
+
+
+/*どの部分のcssに対して
+命令をしているのかコメントを
+記載しよう！
+---------------------*/
+
+
+/*
+---------------------*/
+
+
+
+/*
+---------------------*/
+
+
+
+/*
+---------------------*/
+
+
+
+/*
+---------------------*/
